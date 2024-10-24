@@ -5,18 +5,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = (int)Math.floor(Math.random()*100-1);
-        int b = (int)Math.floor(Math.random()*100-1);
-        System.out.println("a es "+a+" b es "+b+", dime si los quieres sumar=1, multiplicar=2 o dividir=3");
-        int opcion= sc.nextInt();
+        //99 numero de elementos que voy a mostrar
+        int a = (int)(Math.random()*99+1);
+        int b = (int)(Math.random()*99+1);
+        System.out.println("a es "+a+" b es "+b+", suma, multiplica o divide");
+        int opcion= (int) (Math.random()*3);
 
         int suma = a+b;
         int resta = a-b;
         int multiplicacion = a * b;
 
-        if(a>=1 && a<=99 && b>=1 && b<=99) {
             if(opcion==1) {
-                System.out.println("¡¡Has elegido la suma!!. Genial procede a sumar :D");
+                System.out.println("¡¡Has sido elegido por la suma!!. Genial procede a sumar :D");
                 int numero = sc.nextInt();
                 if(numero == suma){
                     System.out.println("Suma correcta");
@@ -24,7 +24,7 @@ public class Main {
                     System.out.println("Suma incorrecta");
                 }
             }else if(opcion==2) {
-                System.out.println("¡¡Has elegido la resta!!. Bueno procede a restar :|");
+                System.out.println("¡¡Has sido elegido por la resta!!. Bueno procede a restar :|");
                 int numero = sc.nextInt();
                 if(numero == resta){
                     System.out.println("Resta correcta");
@@ -32,7 +32,7 @@ public class Main {
                     System.out.println("Resta incorrecta");
                 }
             }else if(opcion==3) {
-                System.out.println("¡¡Has elegido la multiplicación!!. Estupendo procede a multiplicar :*");
+                System.out.println("¡¡Has sido elegido por la multiplicación!!. Estupendo procede a multiplicar :*");
                 int numero = sc.nextInt();
                 if(numero == multiplicacion){
                     System.out.println("Multiplicación correcta");
@@ -42,9 +42,6 @@ public class Main {
             }else{
                 System.out.println("Opción invalida");
             }
-        }else{
-            System.out.println("Los datos no cumplen con las características de ser mayores o iguales que uno y menores de 100");
-        }
         sc.close();
     }
 }
